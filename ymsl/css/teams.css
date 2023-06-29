@@ -1,0 +1,272 @@
+/* Color Palette */
+:root {
+    --primary-color: #1f3a4d;    /* Dark Blue */
+    --secondary-color: #b78e33;  /* Gold */
+    --background-color: #222222; /* Dark Gray */
+    --accent-color: #444444;     /* Charcoal Gray */
+  }
+  
+  body {
+    background-color: var(--background-color);
+    padding-top: .5vw;;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 1vw; /* Add border-radius for rounded corners */
+  }
+  
+  header h1 {
+    font-size: 6vw;
+    margin: 0;
+    letter-spacing: 0.05em;
+    font-family: 'Bebas Neue';
+    padding-left: 1vw;
+    /* Adjust font size as needed */
+    
+  }
+  
+  header h1 a {
+    color: #fff; /* Added color to override the default hyperlink color */
+    text-decoration: none; /* Removed underline */
+  }
+  
+  
+  .search-bar {
+    margin-right: 2vw;
+  }
+  
+  .search-bar input {
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    /* Adjust padding and font size as needed */
+    border: none;
+    border-radius: 0.2vw;
+    font-family: 'Bebas Neue';
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Apply box shadow */
+  }
+  
+  .search-bar button {
+    padding: 0.25vw 1vw;
+    font-size: 1.5vw;
+    /* Adjust padding and font size as needed */
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    font-family: 'Bebas Neue';
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Apply box shadow */
+  }
+  
+  .search-bar button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Increased box-shadow size and opacity on hover */
+  }
+  
+  
+  nav {
+    font-family: 'Bebas Neue';
+    font-size: 2.5vw;
+    margin-left: 4vw;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 1vw;
+    font-size: 3.5vw;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5vw;
+    padding: 0.3vw 1vw;
+    border-radius: 0.2vw;
+    background-color: var(--primary-color);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transform and box-shadow transitions */
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Added box-shadow */
+  }
+  
+  nav a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-1px); /* Added a slight upward translation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Increased box-shadow size on hover */
+  }
+  
+  
+  
+  .container {
+    display: flex;
+    font-family: 'Bebas Neue';
+    min-height: 100vh; /* Use min-height instead of height */
+    flex-wrap: wrap; /* Allow content to wrap to the next line */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .content h2 {
+    font-size: 10vw;
+    margin-bottom: 0.1vw;
+    margin-top: 0.1vw;
+    color: var(--primary-color);
+    padding-left: 0.25vw;
+  }
+  
+  .content div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5vw;
+  }
+  
+  .content h3,
+  .content h4 {
+    margin: 0;
+    margin-left: 0.9vw;
+    color: var(--secondary-color);
+    letter-spacing: 1vh; /* Adjust the value as needed */
+  
+  }
+  .content h3 {
+    font-size: 10vw;
+    margin-bottom: -0.4vw;
+    padding-left: 5vh;
+  
+  }
+  
+  .content h4 {
+    margin-left: 0.1vw;
+    margin-top: 1.3vw;
+    font-size: 6vw;
+    padding-left: 1vh;
+  }
+  
+  .image {
+    flex: 1;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: 100%;
+    /* max-height: 100%; */
+    border-radius: 0.5vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .content p {
+    font-size: 1.6vw; /* Adjust the font size as desired */
+    line-height: 1.5; /* Adjust the line height as desired */
+    color: #fff; /* Change the text color if needed */
+    margin: 1vw 0; /* Adjust the margin as desired */
+  }
+  
+  .content h5 {
+    font-size: 2.5vw; /* Adjust the font size as desired */
+    color: var(--primary-color);
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 0.1em; /* Add letter spacing */
+    color: #fff;
+  }
+  
+  footer {
+    background-color: rgba(31, 58, 77, 0.2); /* Adjust the RGBA values and opacity as desired */
+    color: #fff;
+    padding: 1vw;
+    font-family: 'Bebas Neue';
+  }
+  
+  .footer-content {
+    text-align: left;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 1.5vw;
+  }
+  
+  .left-half {
+    flex: 1;
+    padding: 1vw;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Align content in a column */
+  }
+  
+
+.left-half h2,
+.left-half li,
+.left-half h3  {
+  color: #fff; /* Set the text color to white */
+  font-family: 'Bebas Neue'; /* Match the font style of the rest of the site */
+}
+
+.left-half h2, .left-half h3 {
+  font-size: 6vw; /* Adjust the font size as desired */
+  padding-left: 1vw;
+  margin-bottom: 0.1vw;
+  margin-top: 0.1vw;
+}
+
+.left-half h3 {
+  font-size: 4vw; /* Adjust the font size as desired */ 
+}
+
+.left-half li {
+  font-size: 2.5vw; /* Adjust the font size as desired */
+  margin-left: 1vw;
+  margin-bottom: 0.5vw;
+}
+.right-half {
+  flex: 1;
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--accent-color); Add a background color to the right-half div */
+}
+
+.image-item {
+  flex: 1;
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* Ensure the image stays within the container */
+  height: 100%; /* Ensure the image takes up the full height */
+}
+
+.image-item img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0.5vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
