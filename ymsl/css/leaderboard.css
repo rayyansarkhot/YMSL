@@ -106,61 +106,137 @@
     transform: translateY(-1px); /* Added a slight upward translation */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Increased box-shadow size on hover */
   }
-  
-  
-  
-  .container {
-    display: flex;
-    font-family: 'Bebas Neue';
-    min-height: 100vh; /* Use min-height instead of height */
-    flex-wrap: wrap; /* Allow content to wrap to the next line */
-  }
-  
-  .content {
-    flex: 1;
-    padding: 1vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-  }
-  
-  .content h2 {
-    font-size: 10vw;
-    margin-bottom: 0.1vw;
-    margin-top: 0.1vw;
-    color: var(--primary-color);
-    padding-left: 0.25vw;
-  }
-  
-  .content div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5vw;
-  }
-  
-  .content h3,
-  .content h4 {
-    margin: 0;
-    margin-left: 0.9vw;
-    color: var(--secondary-color);
-    letter-spacing: 1vh; /* Adjust the value as needed */
-  
-  }
-  .content h3 {
-    font-size: 10vw;
-    margin-bottom: -0.4vw;
-    padding-left: 5vh;
-  
-  }
-  
-  .content h4 {
-    margin-left: 0.1vw;
-    margin-top: 1.3vw;
-    font-size: 6vw;
-    padding-left: 1vh;
-  }
+/* Color Palette */
+:root {
+  --primary-color: #1f3a4d;    /* Dark Blue */
+  --secondary-color: #b78e33;  /* Gold */
+  --background-color: #222222; /* Dark Gray */
+  --accent-color: #444444;     /* Charcoal Gray */
+}
+
+body {
+  background-color: var(--background-color);
+  padding-top: 0.5vw;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1vw 0;
+
+}
+
+table th,
+table td {
+  padding: 0vh 0vw; /* Adjust padding using vh and vw units */
+  text-align: left;
+  border-bottom: 1px solid var(--accent-color);
+  color: #fff;
+  font-family: 'Bebas Neue'; /* Apply the font-family */
+  text-align: center; /* Center the text */
+
+}
+
+table th {
+  background-color: var(--primary-color);
+  font-size: 3vh;
+  font-weight: lighter;
+  letter-spacing: .05vw;
+  padding-right: .5vw;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+table th:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+table th i {
+  margin-left: 0.5vw;
+}
+
+
+table td {
+  background-color: var(--background-color);
+}
+
+
+.container {
+  display: flex;
+  font-family: 'Bebas Neue';
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the content horizontally */
+  align-items: flex-start; /* Align the content to the top */
+}
+
+.content {
+  flex: 1;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 100%; /* Ensure content doesn't overflow horizontally */
+}
+
+.content h2 {
+  font-size: 6vw;
+  margin-bottom: 0.1vw;
+  margin-top: 0.1vw;
+  color: var(--primary-color);
+  padding-left: 0.25vw;
+}
+
+.content div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5vw;
+}
+
+.content h3,
+.content h4 {
+  margin: 0;
+  margin-left: 0.9vw;
+  color: var(--secondary-color);
+  letter-spacing: 1vh;
+}
+
+.content h3 {
+  font-size: 6vw;
+  margin-bottom: -0.4vw;
+  padding-left: 2vh;
+}
+
+.content h4 {
+  margin-left: 0.1vw;
+  margin-top: 1.3vw;
+  font-size: 4vw;
+  padding-left: 1vh;
+}
+
+.content p {
+  font-size: 1.6vw;
+  line-height: 1.5;
+  color: #fff;
+  margin: 1vw 0;
+}
+
+.content h5 {
+  font-size: 2.5vw;
+  color: var(--primary-color);
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+
   
   .image {
     flex: 1;

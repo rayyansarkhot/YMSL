@@ -1,11 +1,12 @@
 const express = require('express');
 const { google } = require('googleapis');
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
 
 // Set your API key
-const apiKey = 'AIzaSyARfusRDNwT81WtRtBdlqQ1JyjyoS4YCZM'; // Replace with your API key
+const apiKey = process.env.API_KEY;
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
