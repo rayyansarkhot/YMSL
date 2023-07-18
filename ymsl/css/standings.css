@@ -1,0 +1,277 @@
+/* Color Palette */
+:root {
+  --primary-color: #1f3a4d;    /* Dark Blue */
+  --secondary-color: #b78e33;  /* Gold */
+  --background-color: #222222; /* Dark Gray */
+  --accent-color: #444444;     /* Charcoal Gray */
+}
+
+body {
+  background-color: var(--background-color);
+  padding-top: .5vw;;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 1vw; /* Add border-radius for rounded corners */
+}
+
+header h1 {
+  font-size: 6vw;
+  margin: 0;
+  letter-spacing: 0.05em;
+  font-family: 'Bebas Neue';
+  padding-left: 1vw;
+  /* Adjust font size as needed */
+  
+}
+
+header h1 a {
+  color: #fff; /* Added color to override the default hyperlink color */
+  text-decoration: none; /* Removed underline */
+}
+
+
+.search-bar {
+  margin-right: 2vw;
+}
+
+.search-bar input {
+  padding: 0.5vw;
+  font-size: 1.2vw;
+  /* Adjust padding and font size as needed */
+  border: none;
+  border-radius: 0.2vw;
+  font-family: 'Bebas Neue';
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Apply box shadow */
+}
+
+.search-bar button {
+  padding: 0.25vw 1vw;
+  font-size: 1.5vw;
+  /* Adjust padding and font size as needed */
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.2vw;
+  cursor: pointer;
+  font-family: 'Bebas Neue';
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Apply box shadow */
+}
+
+.search-bar button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Increased box-shadow size and opacity on hover */
+}
+
+
+nav {
+  font-family: 'Bebas Neue';
+  font-size: 2.5vw;
+  margin-left: 4vw;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  margin-right: 1vw;
+  font-size: 3.5vw;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5vw;
+  padding: 0.3vw 1vw;
+  border-radius: 0.2vw;
+  background-color: var(--primary-color);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transform and box-shadow transitions */
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Added box-shadow */
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px); /* Added a slight upward translation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Increased box-shadow size on hover */
+}
+
+.container {
+  display: flex;
+  font-family: 'Bebas Neue';
+  min-height: 100vh; /* Use min-height instead of height */
+  flex-wrap: wrap; /* Allow content to wrap to the next line */
+}
+
+.content {
+  flex: 1;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 2vw;
+  margin-top: 2vw;
+  font-family: 'Bebas Neue';
+  border-radius: .2vw;
+}
+
+table th,
+table td {
+  padding: 1vw;
+  text-align: center;
+}
+
+table thead {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+table tbody tr:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+table th:first-child,
+table td:first-child {
+  text-align: left;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 1vw;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.standings-row td:first-child {
+  text-align: left;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.standings-sort-description {
+  margin-top: 1vw;
+  font-size: 1.5vw;
+  color: #fff;
+}
+
+.standings-sort-description small {
+  display: block;
+}
+
+.standings-sort-description small:not(:last-child) {
+  margin-bottom: 0.5vw;
+}
+
+
+#resultContainer {
+  font-size: 2vw;
+  margin: 0;
+  letter-spacing: 0.05em;
+  font-family: 'Bebas Neue';
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: repeat(2, 0.4fr); /* Two columns of equal width */
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  justify-items: center;
+}
+
+.wrapper {
+
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 2vw;
+  color: #fff;
+
+}
+
+.wrapper h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.scores {
+  margin-bottom: 1vw;
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+  grid-gap: 1vw; /* Gap between grid items */
+  align-items: center; /* Center vertically */
+}
+
+.scores span {
+  display: flex;
+  justify-content: center;
+  align-items: center;  padding: 0.3vw 1vw;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 0.2vw;
+  margin-right: 0.5vw;
+}
+
+.scores span:last-child {
+  margin-right: 0;
+}
+
+
+footer {
+  background-color: rgba(31, 58, 77, 0.2); /* Adjust the RGBA values and opacity as desired */
+  color: #fff;
+  padding: 1vw;
+  font-family: 'Bebas Neue';
+}
+
+.footer-content {
+  text-align: left;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 1.5vw;
+}
+
